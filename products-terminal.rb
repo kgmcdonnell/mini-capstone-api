@@ -11,6 +11,7 @@ while true
   puts "2. #{data[1]["name"]}"
   puts "3. #{data[2]["name"]}"
   puts "4. #{data[3]["name"]}"
+  puts "5. #{data[4]["name"]}"
   puts "----------------------------------"
 
   #ask the user what product they would like more information on
@@ -19,8 +20,12 @@ while true
   if response.downcase == "y"
     puts "Enter Product Number: "
     product_id = gets.chomp
-    puts data[product_id.to_i - 1]
-    sleep(30)
+    if product_id.to_i > 5
+      puts "Invalid response. Try again."
+    else
+      puts data[product_id.to_i - 1]
+      sleep(30)
+    end
   elsif response.downcase == "n"
     puts "Goodbye!"
     break

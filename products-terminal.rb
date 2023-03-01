@@ -7,11 +7,11 @@ while true
   #displaying producta
   puts "----------------------------------"
   puts "Products:"
-  puts "1. #{data[0]["name"]}"
-  puts "2. #{data[1]["name"]}"
-  puts "3. #{data[2]["name"]}"
-  puts "4. #{data[3]["name"]}"
-  puts "5. #{data[4]["name"]}"
+  index = 0
+  while index < data.length
+    puts "#{data[index]["id"]}. #{data[index]["name"]}"
+    index = index + 1
+  end
   puts "----------------------------------"
 
   #ask the user what product they would like more information on

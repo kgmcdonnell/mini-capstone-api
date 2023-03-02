@@ -6,3 +6,11 @@ GET http://localhost:3000/products/2
 
 ### Products Create
 POST http://localhost:3000/products.json
+Content-Type: application/json
+
+{
+  "name": "Take the Day Off Cleansing Balm Makeup Remover",
+  "price": 40,
+  "image_url":"https://media.ulta.com/i/ulta/2532674?w=720&fmt=webp",
+  "description": "a silky lightweight makeup remover that quickly dissolves tenacious eye and face makeups, sunscreens."
+}

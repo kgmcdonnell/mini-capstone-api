@@ -4,7 +4,7 @@ response = HTTP.get("http://localhost:3000/products")
 data = response.parse(:json)
 
 while true
-  #displaying producta
+  #displaying products
   puts "--------------------------------------------------------------"
   puts "Products:"
   index = 0

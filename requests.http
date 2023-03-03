@@ -22,3 +22,6 @@ Content-Type: application/json
 {
   "price": 160
 }
+
+### Product Delete
+DELETE http://localhost:3000/products/14.json 

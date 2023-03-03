@@ -1,6 +1,6 @@
 require "http"
 
-response = HTTP.get("http://localhost:3000/products")
+response = HTTP.get("http://localhost:3000/products.json")
 data = response.parse(:json)
 
 while true
@@ -14,18 +14,36 @@ while true
   end
   puts "--------------------------------------------------------------"
   #ask the user what product they would like more information on
-  puts "Would you like to see more information about a product? (Y/N)"
-  response = gets.chomp
-  if response.downcase == "y"
+  puts "[C]reate [R]ead [Q]uit "
+  user_input = gets.chomp
+  if user_input.downcase == "r"
     puts "Enter Product Number: "
     product_id = gets.chomp
-    if product_id.to_i > data.length
+    index = 0
+    id_exists = false
+    while index < data.length
+      if data[index]["id"] == product_id.to_i
+        id_exists = true
+      end
+      index += 1
+    end
+    if id_exists != true
       puts "Invalid response. Try again."
     else
-      puts data[product_id.to_i - 1]
+      puts HTTP.get("http://localhost:3000/products/#{product_id}")
       sleep(30)
     end
-  elsif response.downcase == "n"
+  elsif user_input.downcase == "c"
+    puts "Name: "
+    name_input = gets.chomp
+    puts "Price: "
+    price_input = gets.chomp
+    puts "image_url: "
+    image_url_input = gets.chomp
+    puts "Description: "
+    description_input = gets.chomp
+    HTTP.post("http://localhost:3000/products.json", :json => { :name => name_input, :price => price_input, :image_url => image_url_input, :description => description_input })
+  elsif user_input.downcase == "q"
     puts "Goodbye!"
     break
   else

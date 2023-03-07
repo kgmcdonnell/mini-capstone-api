@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Dress
   price: 1
   image_url: MyString
-  description: MyString
+  description: a yellow floral dress
 
 two:
-  name: MyString
+  name: Ugly Love Book
   price: 1
   image_url: MyString
-  description: MyString
+  description: a book by Colleen Hover

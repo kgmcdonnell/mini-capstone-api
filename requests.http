@@ -25,3 +25,13 @@ Content-Type: application/json
 
 ### Product Delete
 DELETE http://localhost:3000/products/14.json 
+
+### Supplier Create
+POST http://localhost:3000/suppliers.json
+Content-Type: application/json
+
+{
+  "name": "Morphe",
+  "email": "morphe@test",
+  "phone_number": "2457398829"
+}

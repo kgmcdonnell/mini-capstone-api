@@ -2,7 +2,7 @@
 GET http://localhost:3000/products
 
 ### Products Show
-GET http://localhost:3000/products/1
+GET http://localhost:3000/products/3
 
 ### Products Create
 POST http://localhost:3000/products.json
@@ -31,7 +31,21 @@ POST http://localhost:3000/suppliers.json
 Content-Type: application/json
 
 {
-  "name": "Morphe",
-  "email": "morphe@test",
-  "phone_number": "2457398829"
+  "name": "Dyson",
+  "email": "dyson@test",
+  "phone_number": "3452945673"
 }
+
+### Suppliers Index
+GET http://localhost:3000/suppliers
+
+### Supplier Update
+PATCH http://localhost:3000/suppliers/3.json 
+Content-Type: application/json
+
+{
+  "email": "clinique@test"
+}
+
+### Supplier Delete
+DELETE http://localhost:3000/suppliers/1.json 

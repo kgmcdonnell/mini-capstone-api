@@ -15,4 +15,8 @@ Rails.application.routes.draw do
   get "/suppliers" => "suppliers#index"
   #create a supplier
   post "/suppliers" => "suppliers#create"
+  #delete a supplier
+  delete "/suppliers/:id" => "suppliers#destroy"
+  #updates a supplier
+  patch "/suppliers/:id" => "suppliers#update"
 end

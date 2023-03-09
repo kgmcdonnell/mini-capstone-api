@@ -6,5 +6,4 @@ json.description product.description
 json.created_at product.created_at
 json.updated_at product.updated_at
 json.inventory product.inventory
-json.supplier_id product.supplier_id
 json.supplier product.supplier

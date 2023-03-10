@@ -12,8 +12,10 @@ Content-Type: application/json
   "name": "test",
   "price": 40,
   "image_url":"test",
-  "description": "testing testing testing."
+  "description": "testing testing testing.",
+  "url": "testtesttest",
 }
+
 
 ### Products Update
 PATCH http://localhost:3000/products/8.json 
@@ -24,7 +26,7 @@ Content-Type: application/json
 }
 
 ### Product Delete
-DELETE http://localhost:3000/products/8.json 
+DELETE http://localhost:3000/products/9.json 
 
 ### Supplier Create
 POST http://localhost:3000/suppliers.json

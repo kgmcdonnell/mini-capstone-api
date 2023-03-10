@@ -6,7 +6,18 @@
 #   { name: "Purity One-Step Facial Cleanser", price: "41.0", image_url: "https://media.ulta.com/i/ulta/2583945?w=720&fmt=webp", description: "Deep-cleans pores, eliminates makeup buildup, and lightly hydrates and tones skin", inventory: 1 },
 # ])
 
-Supplier.create!([
-  { name: "Dyson", email: "dyson@test", phone_number: "1234566789" },
-  { name: "Charlotte Tilbury", email: "charlottetilbury@test", phone_number: "9876654321" },
+# Supplier.create!([
+#   { name: "Dyson", email: "dyson@test", phone_number: "1234566789" },
+#   { name: "Charlotte Tilbury", email: "charlottetilbury@test", phone_number: "9876654321" },
+# ])
+
+Image.create!([
+  { url: "https://media.kohlsimg.com/is/image/kohls/5142337?wid=1200&hei=1200&op_sharpen=1", product_id: 1 },
+  { url: "https://eco-beauty.dior.com/dw/image/v2/BDGF_PRD/on/", product_id: 2 },
+  { url: "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/hero/400714-01.png?$responsive$&cropPathE=desktop&fit=stretch,1&wid=960", product_id: 3 },
+  { url: "https://media.ulta.com/i/ulta/2583945?w=720&fmt=webp", product_id: 4 },
+  { url: "https://images.ctfassets.net/wlke2cbybljx/6QLItVWaR3INrE5B8MMObK/79854007d3f3ed8a40a1e4d7e0c21e12/pillow-talk-packshot.png?w=500&h=500&fit=fill&fm=jpg&bg=", product_id: 5 },
+  { url: "https://media.ulta.com/i/ulta/2532674?w=720&fmt=webp", product_id: 6 },
+  { url: "https://www.sephora.com/productimages/sku/s2571404-main-zoom.jpg?imwidth=612", product_id: 7 },
+  { url: "https://www.maisonmargiela-fragrances.us/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-margiela-master-catalog/default/dw2b3b9f37/images/products/MM005/MM005_03.jpg?sw=375&sh=375&sm=cut&sfrm=jpg&q=70", product_id: 1 },
 ])

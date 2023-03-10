@@ -14,10 +14,16 @@ class ProductsController < ApplicationController
     @product = Product.new(
       name: params[:name],
       price: params[:price],
-      image_url: params[:image_url],
+      # image_url: params[:image_url],
       description: params[:description],
     )
+
     if @product.save
+      image = Image.new(
+        url: params[:url],
+        product_id: @product.id,
+      )
+      image.save
       render template: "products/show"
     else
       render json: { error: @product.errors.full_messages }, status: 422
@@ -30,7 +36,7 @@ class ProductsController < ApplicationController
     @product.update(
       name: params[:name] || @product.name,
       price: params[:price] || @product.price,
-      image_url: params[:image_url] || @product.image_url,
+      # image_url: params[:image_url] || @product.image_url,
       description: params[:description] || @product.description,
     )
     if @product.valid?

@@ -14,14 +14,14 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal ["id", "name", "price", "image_url", "description", "created_at", "updated_at", "inventory"], data.keys
+    assert_equal ["id", "name", "price", "description", "created_at", "updated_at", "inventory", "supplier", "images"], data.keys
 
     assert_equal true, data.keys.include?("name")
   end
 
   test "create" do
     assert_difference "Product.count", 1 do
-      post "/products.json", params: { name: "Dermalogica Circular Hydration Serum", price: 64.00, image_url: "https://media.ulta.com/i/ulta/2591108?w=720&fmt=webp", description: "This long lasting serum immediately floods skin with hydration and helps prevent future hydration evaporation." }
+      post "/products.json", params: { name: "Dermalogica Circular Hydration Serum", price: 64.00, description: "This long lasting serum immediately floods skin with hydration and helps prevent future hydration evaporation.", inventory: 1, supplier_id: Supplier.first.id }
 
       post "/products.json", params: {}
       assert_response 422

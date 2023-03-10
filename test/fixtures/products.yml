@@ -3,11 +3,13 @@
 one:
   name: Dress
   price: 1
-  image_url: MyString
   description: a yellow floral dress
+  inventory: 10
+  supplier: one
 
 two:
   name: Ugly Love Book
   price: 1
-  image_url: MyString
   description: a book by Colleen Hover
+  inventory: 23
+  supplier: one

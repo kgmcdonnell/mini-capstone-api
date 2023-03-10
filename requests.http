@@ -9,16 +9,17 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "test",
-  "price": 40,
-  "image_url":"test",
-  "description": "testing testing testing.",
-  "url": "testtesttest",
+  "name": "producttest",
+  "price": 1,
+  "description": "I am testing my product",
+  "inventory": 10,
+  "supplier_id": 2,
+  "url": "testing.com"
 }
 
 
 ### Products Update
-PATCH http://localhost:3000/products/8.json 
+PATCH http://localhost:3000/products/1.json 
 Content-Type: application/json
 
 {

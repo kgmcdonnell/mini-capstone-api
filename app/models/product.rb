@@ -5,11 +5,13 @@ class Product < ApplicationRecord
 
   validates :description, presence: true, length: { in: 10..500 }
 
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
+  # def supplier
+  #   Supplier.find_by(id: supplier_id)
+  # end
+  belongs_to :supplier
 
-  def images
-    Image.where(product_id: id)
-  end
+  # def images
+  #   Image.where(product_id: id)
+  # end
+  has_many :images
 end

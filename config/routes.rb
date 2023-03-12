@@ -22,4 +22,7 @@ Rails.application.routes.draw do
 
   #create users
   post "/users" => "users#create"
+
+  #create session for jwt
+  post "/sessions" => "sessions#create"
 end

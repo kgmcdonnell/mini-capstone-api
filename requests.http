@@ -59,8 +59,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Sara",
-  "email": "sara@test.com",
+  "name": "Lexi",
+  "email": "lexi@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -70,7 +70,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "sara@test.com",
+  "email": "lexi@test.com",
   "password": "password"
 }
 
@@ -86,9 +86,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2Nzg5MjcwO
 
 ### Orders Show
 GET  http://localhost:3000/orders/7.json
-Content-Type: application/json 
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2Nzg5MjU0MjR9.p7NVlO49vmeLqUglX9UZaiFagtWfZLQ4Uca7Wpd_P48
 
 ### Display all Orders
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2Nzg5MjU0MjR9.p7NVlO49vmeLqUglX9UZaiFagtWfZLQ4Uca7Wpd_P48
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4LCJleHAiOjE2NzkwMDk3MjN9.T2wZZnBf6-7eBojoo0rvYDSLNo6EaDCo_RowpcJOtFE

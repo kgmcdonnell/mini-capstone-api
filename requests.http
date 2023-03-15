@@ -59,10 +59,10 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Bristol2",
-  "email": "bristol2@test.com",
-  "password": "password2",
-  "password_confirmation": "password2"
+  "name": "Sara",
+  "email": "sara@test.com",
+  "password": "password",
+  "password_confirmation": "password"
 }
 
 ### Session Create
@@ -70,6 +70,25 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "bristol2@test.com",
-  "password": "password2"
+  "email": "sara@test.com",
+  "password": "password"
 }
+
+### Orders Create
+POST http://localhost:3000/orders.json 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2Nzg5MjcwODN9.JmGQCEyB8GoKwuOe0YwOzohaN8II7Wg6mYsOYpout2g
+
+{
+  "product_id": 1,
+  "quantity": 2
+}
+
+### Orders Show
+GET  http://localhost:3000/orders/7.json
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2Nzg5MjU0MjR9.p7NVlO49vmeLqUglX9UZaiFagtWfZLQ4Uca7Wpd_P48
+
+### Display all Orders
+GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2Nzg5MjU0MjR9.p7NVlO49vmeLqUglX9UZaiFagtWfZLQ4Uca7Wpd_P48

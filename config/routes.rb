@@ -25,4 +25,13 @@ Rails.application.routes.draw do
 
   #create session for jwt
   post "/sessions" => "sessions#create"
+
+  #create orders
+  post "/orders" => "orders#create"
+
+  #show orders
+  get "/orders/:id" => "orders#show"
+
+  #display all orders
+  get "/orders" => "orders#index"
 end

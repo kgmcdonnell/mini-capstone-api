@@ -1,6 +1,15 @@
 require "test_helper"
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
+  setup do
+    # creating a admin user
+    @user = User.create(name: "Test", email: "test@test.com", password: "password", admin: true)
+    # creating a session
+    post "/sessions.json", params: { email: "test@test.com", password: "password" }
+    data = JSON.parse(response.body)
+    @jwt = data["jwt"]
+  end
+
   test "index" do
     get "/products.json"
     assert_response 200
@@ -21,25 +30,25 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test "create" do
     assert_difference "Product.count", 1 do
-      post "/products.json", params: { name: "Dermalogica Circular Hydration Serum", price: 64.00, description: "This long lasting serum immediately floods skin with hydration and helps prevent future hydration evaporation.", inventory: 1, supplier_id: Supplier.first.id }
+      post "/products.json", params: { name: "Dermalogica Circular Hydration Serum", price: 64.00, description: "This long lasting serum immediately floods skin with hydration and helps prevent future hydration evaporation.", inventory: 1, supplier_id: Supplier.first.id }, headers: { "Authorization" => "Bearer #{@jwt}" }
 
-      post "/products.json", params: {}
+      post "/products.json", params: {}, headers: { "Authorization" => "Bearer #{@jwt}" }
       assert_response 422
     end
   end
 
   test "update" do
-    patch "/products/#{Product.first.id}.json", params: { price: 200 }
+    patch "/products/#{Product.first.id}.json", params: { price: 200 }, headers: { "Authorization" => "Bearer #{@jwt}" }
     assert_response 200
     data = JSON.parse(response.body)
     assert_equal 200.0, data["price"].to_i
-    patch "/products/#{Product.first.id}.json", params: { name: "" }
+    patch "/products/#{Product.first.id}.json", params: { name: "" }, headers: { "Authorization" => "Bearer #{@jwt}" }
     assert_response 422
   end
 
   test "destroy" do
     assert_difference "Product.count", -1 do
-      delete "/products/#{Product.first.id}.json"
+      delete "/products/#{Product.first.id}.json", headers: { "Authorization" => "Bearer #{@jwt}" }
       assert_response 200
     end
   end

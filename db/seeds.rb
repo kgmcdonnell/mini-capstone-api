@@ -18,4 +18,5 @@
 #   { url: "https://media.ulta.com/i/ulta/2583945?w=720&fmt=webp", product_id: 4 },
 #   { url: "https://images.ctfassets.net/wlke2cbybljx/6QLItVWaR3INrE5B8MMObK/79854007d3f3ed8a40a1e4d7e0c21e12/pillow-talk-packshot.png?w=500&h=500&fit=fill&fm=jpg&bg=", product_id: 5 },
 #   { url: "https://www.maisonmargiela-fragrances.us/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-margiela-master-catalog/default/dw2b3b9f37/images/products/MM005/MM005_03.jpg?sw=375&sh=375&sm=cut&sfrm=jpg&q=70", product_id: 1 },
+#   { url: "https://images.ctfassets.net/wlke2cbybljx/6QLItVWaR3INrE5B8MMObK/79854007d3f3ed8a40a1e4d7e0c21e12/pillow-talk-packshot.png?w=500&h=500&fit=fill&fm=jpg&bg=", product_id: 2 },
 # ])

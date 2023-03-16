@@ -22,6 +22,8 @@ Content-Type: application/json
 ### Products Update
 PATCH http://localhost:3000/products/1.json 
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzkwMTg0MzB9.Zd2XNULRN5MAW10uumtiWwqd8hjGut6-idvaLqgAiYQ",
+  "email": "kathleen@test.com
 
 {
   "price": 160
@@ -70,7 +72,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "lexi@test.com",
+  "email": "kathleen@test.com",
   "password": "password"
 }
 

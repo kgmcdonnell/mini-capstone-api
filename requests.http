@@ -1,6 +1,5 @@
 ### Products Index
-GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE2Nzg4Mzc4NTB9.woPbnyDigCQvpJbsVXuGP8KLLIOXmTZj1qkiPvc_uec
+GET http://localhost:3000/products.json?category=Makeup
 
 ### Products Show
 GET http://localhost:3000/products/1.json

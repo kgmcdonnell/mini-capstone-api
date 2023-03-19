@@ -71,14 +71,14 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "kathleen@test.com",
+  "email": "bristol@test.com",
   "password": "password"
 }
 
 ### Orders Create
 POST http://localhost:3000/orders.json 
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2Nzg5MjcwODN9.JmGQCEyB8GoKwuOe0YwOzohaN8II7Wg6mYsOYpout2g
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NzkxNjA3MjR9.xZybJyJFuURlS8v5EQBZnHgTI5TBp6_h10wD78LsIj4
 
 {
   "product_id": 1,

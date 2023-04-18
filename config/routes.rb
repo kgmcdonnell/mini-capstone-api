@@ -34,4 +34,10 @@ Rails.application.routes.draw do
 
   #display all orders
   get "/orders" => "orders#index"
+
+  # add item to your shopping cart
+  post "/carted_products" => "carted_products#create"
+
+  # display all carted_products
+  get "/carted_products" => "carted_products#index"
 end

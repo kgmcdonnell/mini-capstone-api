@@ -8,9 +8,14 @@ class OrdersController < ApplicationController
   end
 
   def create
-    subtotal = params[:quantity].to_i * Product.find_by(id: params[:product_id]).price
-    tax = subtotal * 0.09
-    total = subtotal + tax
+    @carted_products = current_user.carted_products.where(status: "carted")
+    calculated_subtotal = 0
+    @carted_products.each do |carted_product|
+      calculated_subtotal += (carted_product.quantity * carted_product.product.price)
+    end
+
+    tax = calculated_subtotal * 0.09
+    total = calculated_subtotal + tax
     @order = Order.new(
       user_id: current_user.id,
       product_id: params[:product_id],

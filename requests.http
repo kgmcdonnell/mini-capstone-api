@@ -92,3 +92,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2Nzg5MjU0M
 ### Display all Orders
 GET http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4LCJleHAiOjE2NzkwMDk3MjN9.T2wZZnBf6-7eBojoo0rvYDSLNo6EaDCo_RowpcJOtFE
+
+### Add a product to a shopping cart
+POST http://localhost:3000/carted_products.json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NzkzMzA4MTR9.qf4uUbjnxNx10EqhvyZcTL_fm_V2GpEERVd7fGSv2CY
+
+{
+  "product_id": 3,
+  "quantity": 2
+}
